@@ -1,0 +1,8 @@
+# Защита от исходящего спама.
+if [ "$PROTECT_MAIL" == "yes" ]; then
+    iptables -A OUTPUT -p tcp -m tcp --dport $SMTP_PORT -j DROP
+
+    for MAIL_USER in $MAIL_USERS; do
+        iptables -A OUTPUT -p tcp -m tcp --dport $SMTP_PORT -m owner --gid-owner $MAIL_USER -j ACCEPT
+    done
+fi

@@ -1,0 +1,6 @@
+# Nat
+iptables -t nat -A POSTROUTING -s ${VNET} -o ${PUBLIC_IF} -j SNAT --to ${PUBLIC_IP}
+
+# Allow Forwarding to and from these networks.
+iptables -A FORWARD -s ${VNET} -j ACCEPT
+iptables -A FORWARD -d ${VNET} -j ACCEPT

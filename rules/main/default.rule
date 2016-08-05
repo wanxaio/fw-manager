@@ -1,0 +1,4 @@
+# Apply the default policy.
+iptables -P INPUT DROP
+iptables -P OUTPUT ACCEPT
+iptables -P FORWARD DROP

@@ -1,0 +1,2 @@
+# Allow incoming connections on any protocol, for these addresses and subnets.
+iptables -A INPUT -s ${ADDR} -j ACCEPT

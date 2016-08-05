@@ -1,0 +1,48 @@
+###
+### Fw-manager configuration file.
+###
+
+### Name of external network interface.
+# Example:
+#     PUBLIC_IF="eth1"
+PUBLIC_IF="eth0"
+
+### Name of the local network interface.
+# Example:
+#     PUBLIC_IF="eth1"
+LOCAL_IF="lo"
+
+### List of trusted senders. Everything is permitted.
+# Example:
+# TRUSTED_IPS="192.168.1.1
+#              192.168.2.0/24"
+TRUSTED_IPS=""
+
+### Enable NAT.
+# Valid values: YES/NO
+# Example:
+#     NAT="YES"
+NAT="NO"
+
+### List of subnets.
+# Example:
+#     VNETS="10.0.1.0/24
+#            10.0.2.0/24"
+VNETS=""
+
+### Custom tcp ports.
+# Example:
+#     TCP_CUSTOM_PORTS="1234
+#                       5000"
+TCP_CUSTOM_PORTS=""
+
+### Custom udp ports.
+# Example:
+#     UDP_CUSTOM_PORTS="1234
+#                       5000"
+UDP_CUSTOM_PORTS=""
+
+### Custom rules.
+# Example:
+#     CUSTOM_RULES="YES"
+CUSTOM_RULES="NO"

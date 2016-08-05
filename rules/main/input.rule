@@ -1,0 +1,2 @@
+# Allow incoming connections on tcp and (or) udp, on the specified port.
+iptables -A INPUT -p ${PROTO} --dport ${PORT} -j ACCEPT

@@ -1,0 +1,2 @@
+# Allow traceroute.
+iptables -A INPUT -p udp --dport 33434:33525 -j ACCEPT

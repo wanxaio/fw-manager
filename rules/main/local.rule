@@ -1,0 +1,3 @@
+# Allow all on the local interface.
+iptables -I INPUT -i ${LOCAL_IF} -j ACCEPT
+iptables -I OUTPUT -o ${LOCAL_IF} -j ACCEPT
